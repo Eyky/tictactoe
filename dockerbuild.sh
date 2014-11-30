@@ -2,21 +2,8 @@
 
 echo Cleaning...
 rm -rf ./dist
- 
-echo "Installing grunt"
-npm install grunt
- 
-echo "Installing bower"
-npm install bower
- 
-echo "Npm install"
-npm install
- 
-echo "Bower install"
-bower install
- 
- 
-echo "Running grunt"
+
+echo Building app
 grunt
 
 cp ./Dockerfile ./dist/
@@ -27,4 +14,4 @@ npm install --production
 echo Building docker image
 docker build -t eykyeyky/tictactoe .
 
-echo "Done!"
+echo "Done"

@@ -1,7 +1,12 @@
 #!/bin/bash
 
-echo fetching stuff
-docker pull eykyeyky/tictactoe
-docker stop tac
-docker rm tac
-docker run --name tac -d -p 80:8080 eykyeyky/tictactoe
+
+echo "Stopping and removing all docker containers"
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
+echo "Pulling new docker image"
+docker pull olafurns/tictactoe
+echo "Starting server"
+docker run -p 80:8080 -d -e "NODE_ENV=production" eykyeyky/tictactoe
+echo "Closing ssh"
+exit

@@ -27,4 +27,7 @@ npm install --production
 echo Building docker image
 docker build -t eykyeyky/tictactoe .
 
+echo Pushing image
+docker push eykyeyky/tictactoe
+
 echo "Done"

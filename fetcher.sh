@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -e
 echo "Stopping and removing all docker containers"
 docker stop $(docker ps -a -q)
 docker rm $(docker ps -a -q)

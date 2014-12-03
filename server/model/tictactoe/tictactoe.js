@@ -2,11 +2,11 @@
  * Created by eyky on 2.12.2014.
  */
 
-module.exports = function(history){
+module.exports = function(history, currentMove){
 
   var tictactoeState = require('./gameState.js');
 
-  var gameState = tictactoeState(history);
+  var gameState = tictactoeState(history, currentMove);
 
 
   return {
@@ -42,6 +42,16 @@ module.exports = function(history){
           }]
         },
         "MakeMove": function(cmd){
+          if(gameState.spotTaken())
+          {
+            return[{
+              event: "SpotTaken",
+              user: cmd.user,
+              move: cmd.move,
+              name: cmd.name,
+              timeStamp: cmd.timeStamp
+            }];
+          }
           return[{
             event: "MoveMade",
             user: cmd.user,

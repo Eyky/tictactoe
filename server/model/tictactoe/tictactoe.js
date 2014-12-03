@@ -40,6 +40,15 @@ module.exports = function(history){
             name: cmd.name,
             timeStamp: cmd.timeStamp
           }]
+        },
+        "MakeMove": function(cmd){
+          return[{
+            event: "MoveMade",
+            user: cmd.user,
+            move: cmd.move,
+            name: cmd.name,
+            timeStamp: cmd.timeStamp
+          }]
         }
       }
       return cmdHandler[cmd.cmd](cmd);

@@ -52,7 +52,7 @@ describe('Make Move command', function(){
       }];
 
 
-    var actualEvents = tictactoe(given, when.move).executeCommand(when);
+    var actualEvents = tictactoe(given).executeCommand(when);
     //should(actualEvents.length).be.exactly(1);
 
     should(JSON.stringify(actualEvents)).be.exactly(JSON.stringify(then));

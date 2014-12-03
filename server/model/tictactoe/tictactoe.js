@@ -39,7 +39,7 @@ module.exports = function(history, currentMove){
             user: cmd.user,
             name: cmd.name,
             timeStamp: cmd.timeStamp
-          }]
+          }];
         },
         "MakeMove": function(cmd){
           if(gameState.yourTurn() === cmd.user.userName) {
@@ -49,26 +49,37 @@ module.exports = function(history, currentMove){
               move: cmd.move,
               name: cmd.name,
               timeStamp: cmd.timeStamp
-            }]
+            }];
           }
-            if(gameState.spotTaken(cmd.move))
-            {
-              return[{
-                event: "SpotTaken",
-                user: cmd.user,
-                move: cmd.move,
-                name: cmd.name,
-                timeStamp: cmd.timeStamp
-              }];
-            }
+          if(gameState.spotTaken(cmd.move))
+          {
             return[{
-              event: "MoveMade",
+              event: "SpotTaken",
               user: cmd.user,
               move: cmd.move,
               name: cmd.name,
               timeStamp: cmd.timeStamp
-            }]
+            }];
           }
+          if(gameState.gameWon(cmd.move))
+          {
+            return[{
+              event: "GameWon",
+              user: cmd.user,
+              move: cmd.move,
+              name: cmd.name,
+              timeStamp: cmd.timeStamp
+            }];
+          }
+
+          return[{
+            event: "MoveMade",
+            user: cmd.user,
+            move: cmd.move,
+            name: cmd.name,
+            timeStamp: cmd.timeStamp
+          }]
+        }
 
 
         }

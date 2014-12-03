@@ -42,25 +42,37 @@ module.exports = function(history, currentMove){
           }]
         },
         "MakeMove": function(cmd){
-          if(gameState.spotTaken())
-          {
-            return[{
-              event: "SpotTaken",
+          if(gameState.yourTurn() === cmd.user.userName) {
+            return [{
+              event: "NotYourTurn",
               user: cmd.user,
               move: cmd.move,
               name: cmd.name,
               timeStamp: cmd.timeStamp
-            }];
+            }]
           }
-          return[{
-            event: "MoveMade",
-            user: cmd.user,
-            move: cmd.move,
-            name: cmd.name,
-            timeStamp: cmd.timeStamp
-          }]
+            if(gameState.spotTaken(cmd.move))
+            {
+              return[{
+                event: "SpotTaken",
+                user: cmd.user,
+                move: cmd.move,
+                name: cmd.name,
+                timeStamp: cmd.timeStamp
+              }];
+            }
+            return[{
+              event: "MoveMade",
+              user: cmd.user,
+              move: cmd.move,
+              name: cmd.name,
+              timeStamp: cmd.timeStamp
+            }]
+          }
+
+
         }
-      }
+
       return cmdHandler[cmd.cmd](cmd);
     }
   }

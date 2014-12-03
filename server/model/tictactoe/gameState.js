@@ -5,26 +5,48 @@ var _ = require('lodash');
 
 module.exports = function(history, currentMove){
   var gameFull = false;
-  var spotTaken = false;
+  var gameGrid = ['','','','','','','','',''];
+  var playerTurn = 0;
+  var lastPlayer = null;
   _.each(history, function(event){
     if(event.event === "GameJoined") {
       gameFull = true;
-    }
-  });
-  _.each(history, function(move){
-    if(move.move === currentMove){
-      spotTaken = true;
+
     }
   });
 
 
+  _.each(history, function(event){
+    if(event.event === "MoveMade"){
+      playerTurn++;
+      lastPlayer = event.user.userName;
+      if(playerTurn%2 === 0){
+        gameGrid[event.move] = '0';
+      }
+      else{
+
+        gameGrid[event.move] = 'X';
+      }
+
+    }
+  });
+
+
+  console.log(gameGrid);
 
   return {
-    gameFull : function(){
+    gameFull: function () {
       return gameFull;
     },
-    spotTaken: function(){
-      return spotTaken;
+    spotTaken: function (currentMove) {
+      if (gameGrid[currentMove] === '') {
+        return false;
+      }
+      return true;
+    },
+    yourTurn: function () {
+      return lastPlayer;
     }
+
   }
 };

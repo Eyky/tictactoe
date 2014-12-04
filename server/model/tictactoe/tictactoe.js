@@ -71,6 +71,16 @@ module.exports = function(history, currentMove){
               timeStamp: cmd.timeStamp
             }];
           }
+          if(gameState.gameDraw())
+          {
+            return[{
+              event: "GameDraw",
+              user: cmd.user,
+              move: cmd.move,
+              name: cmd.name,
+              timeStamp: cmd.timeStamp
+            }];
+          }
 
           return[{
             event: "MoveMade",

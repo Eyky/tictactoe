@@ -90,6 +90,12 @@ module.exports = function(history, currentMove){
       }
       return false;
 
+    },
+    gameDraw: function(){
+      if(playerTurn === 8){
+        return true;
+      }
+      return false;
     }
 
   }

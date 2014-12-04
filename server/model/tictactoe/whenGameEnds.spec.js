@@ -86,7 +86,7 @@ describe('game Won command', function(){
     }];
 
     var actualEvents = tictactoe(given).executeCommand(when);
-    //should(actualEvents.length).be.exactly(1);
+
 
     should(JSON.stringify(actualEvents)).be.exactly(JSON.stringify(then));
 
@@ -103,86 +103,86 @@ describe('game Won command', function(){
       name: "LeGame",
       timeStamp: "2014-12-02T11:29:29"
     },
-      {
-        event: "GameJoined",
-        user: {
-          userName: "Doddi"
-        },
-        name: "LeGame",
-        timeStamp: "2014-12-02T11:29:29"
+    {
+      event: "GameJoined",
+      user: {
+        userName: "Doddi"
       },
-      {
-        event: "MoveMade",
-        user: {
-          userName: "Eyky"
-        },
-        move: "4",
-        name: "LeGame",
-        timeStamp: "2014-12-02T11:29:29"
+      name: "LeGame",
+      timeStamp: "2014-12-02T11:29:29"
+    },
+    {
+      event: "MoveMade",
+      user: {
+        userName: "Eyky"
       },
-      {
-        event: "MoveMade",
-        user: {
-          userName: "Doddi"
-        },
-        move: "0",
-        name: "LeGame",
-        timeStamp: "2014-12-02T11:29:29"
+      move: "4",
+      name: "LeGame",
+      timeStamp: "2014-12-02T11:29:29"
+    },
+    {
+      event: "MoveMade",
+      user: {
+        userName: "Doddi"
       },
-      {
-        event: "MoveMade",
-        user: {
-          userName: "Eyky"
-        },
-        move: "2",
-        name: "LeGame",
-        timeStamp: "2014-12-02T11:29:29"
+      move: "0",
+      name: "LeGame",
+      timeStamp: "2014-12-02T11:29:29"
+    },
+    {
+      event: "MoveMade",
+      user: {
+        userName: "Eyky"
       },
-      {
-        event: "MoveMade",
-        user: {
-          userName: "Doddi"
-        },
-        move: "6",
-        name: "LeGame",
-        timeStamp: "2014-12-02T11:29:29"
+      move: "2",
+      name: "LeGame",
+      timeStamp: "2014-12-02T11:29:29"
+    },
+    {
+      event: "MoveMade",
+      user: {
+        userName: "Doddi"
       },
-      {
-        event: "MoveMade",
-        user: {
-          userName: "Eyky"
-        },
-        move: "3",
-        name: "LeGame",
-        timeStamp: "2014-12-02T11:29:29"
+      move: "6",
+      name: "LeGame",
+      timeStamp: "2014-12-02T11:29:29"
+    },
+    {
+      event: "MoveMade",
+      user: {
+        userName: "Eyky"
       },
-      {
-        event: "MoveMade",
-        user: {
-          userName: "Doddi"
-        },
-        move: "5",
-        name: "LeGame",
-        timeStamp: "2014-12-02T11:29:29"
+      move: "3",
+      name: "LeGame",
+      timeStamp: "2014-12-02T11:29:29"
+    },
+    {
+      event: "MoveMade",
+      user: {
+        userName: "Doddi"
       },
-      {
-        event: "MoveMade",
-        user: {
-          userName: "Eyky"
-        },
-        move: "7",
-        name: "LeGame",
-        timeStamp: "2014-12-02T11:29:29"
+      move: "5",
+      name: "LeGame",
+      timeStamp: "2014-12-02T11:29:29"
+    },
+    {
+      event: "MoveMade",
+      user: {
+        userName: "Eyky"
       },
-      {
-        event: "MoveMade",
-        user: {
-          userName: "Doddi"
-        },
-        move: "1",
-        name: "LeGame",
-        timeStamp: "2014-12-02T11:29:29"
-      }];
+      move: "7",
+      name: "LeGame",
+      timeStamp: "2014-12-02T11:29:29"
+    },
+    {
+      event: "MoveMade",
+      user: {
+        userName: "Doddi"
+      },
+      move: "1",
+      name: "LeGame",
+      timeStamp: "2014-12-02T11:29:29"
+    }];
 
     var when = {
       cmd: "MakeMove",
@@ -206,7 +206,7 @@ describe('game Won command', function(){
       }];
 
     var actualEvents = tictactoe(given).executeCommand(when);
-    //should(actualEvents.length).be.exactly(1);
+
 
     should(JSON.stringify(actualEvents)).be.exactly(JSON.stringify(then));
 

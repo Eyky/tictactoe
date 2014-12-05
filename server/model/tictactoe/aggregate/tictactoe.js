@@ -16,9 +16,9 @@ module.exports = function(history, currentMove){
       var cmdHandler = {
         "CreateGame": function (cmd) {
           return [{
+            id: "1",
             event: "GameCreated",
             user: cmd.user,
-            id: "1",
             name: cmd.name,
             timeStamp: cmd.timeStamp
 
@@ -29,17 +29,17 @@ module.exports = function(history, currentMove){
           {
             return [{
 
+              id: cmd.id,
               event: "GameFull",
               user: cmd.user,
-              id: cmd.id,
               name: cmd.name,
               timeStamp: cmd.timeStamp
             }];
           }
 
           return [{
-            event: "GameJoined",
             id: cmd.id,
+            event: "GameJoined",
             user: cmd.user,
             name: cmd.name,
             timeStamp: cmd.timeStamp
@@ -48,10 +48,10 @@ module.exports = function(history, currentMove){
         "MakeMove": function(cmd){
           if(gameState.yourTurn() === cmd.user.userName) {
             return [{
+              id: cmd.id,
               event: "NotYourTurn",
               user: cmd.user,
               move: cmd.move,
-              id: cmd.id,
               name: cmd.name,
               timeStamp: cmd.timeStamp
             }];
@@ -59,10 +59,10 @@ module.exports = function(history, currentMove){
           if(gameState.spotTaken(cmd.move))
           {
             return[{
+              id: cmd.id,
               event: "SpotTaken",
               user: cmd.user,
               move: cmd.move,
-              id: cmd.id,
               name: cmd.name,
               timeStamp: cmd.timeStamp
             }];
@@ -70,18 +70,18 @@ module.exports = function(history, currentMove){
           if(gameState.gameWon(cmd.move))
           {
             return[{
+              id: cmd.id,
               event: "MoveMade",
               user: cmd.user,
               move: cmd.move,
-              id: cmd.id,
               name: cmd.name,
               timeStamp: cmd.timeStamp
             },
             {
 
+              id: cmd.id,
               event: "GameWon",
               user: cmd.user,
-              id: cmd.id,
               name: cmd.name,
               timeStamp: cmd.timeStamp
             }];
@@ -89,26 +89,26 @@ module.exports = function(history, currentMove){
           if(gameState.gameDraw())
           {
             return[{
+              id: cmd.id,
               event: "MoveMade",
               user: cmd.user,
               move: cmd.move,
-              id: cmd.id,
               name: cmd.name,
               timeStamp: cmd.timeStamp
             },
           {
 
+              id: cmd.id,
               event: "GameDraw",
               user: cmd.user,
-              id: cmd.id,
               name: cmd.name,
               timeStamp: cmd.timeStamp
             }];
           }
 
           return[{
-            event: "MoveMade",
             id: cmd.id,
+            event: "MoveMade",
             user: cmd.user,
             move: cmd.move,
             name: cmd.name,

@@ -11,60 +11,60 @@ describe('game Won command', function(){
   it('should emit Game Won event', function(){
 
     var given = [{
+      id: "1",
       event: "GameCreated",
       user: {
         userName: "Eyky"
       },
-      id: "1",
       name: "LeGame",
       timeStamp: "2014-12-02T11:29:29"
     },
     {
+      id: "1",
       event: "GameJoined",
       user: {
         userName: "Doddi"
       },
-      id: "1",
       name: "LeGame",
       timeStamp: "2014-12-02T11:29:29"
     },
     {
+      id: "1",
       event: "MoveMade",
       user: {
         userName: "Eyky"
       },
       move: "0",
-      id: "1",
       name: "LeGame",
       timeStamp: "2014-12-02T11:29:29"
     },
     {
+      id: "1",
       event: "MoveMade",
       user: {
         userName: "Doddi"
       },
       move: "1",
-      id: "1",
       name: "LeGame",
       timeStamp: "2014-12-02T11:29:29"
     },
     {
+      id: "1",
       event: "MoveMade",
       user: {
         userName: "Eyky"
       },
       move: "4",
-      id: "1",
       name: "LeGame",
       timeStamp: "2014-12-02T11:29:29"
     },
     {
+      id: "1",
       event: "MoveMade",
       user: {
         userName: "Doddi"
       },
       move: "2",
-      id: "1",
       name: "LeGame",
       timeStamp: "2014-12-02T11:29:29"
     }];
@@ -72,32 +72,32 @@ describe('game Won command', function(){
 
 
     var when = {
+      id: "1",
       cmd: "MakeMove",
       user: {
         userName: "Eyky"
       },
       move: "8",
-      id: "1",
       name: "LeGame",
-      timeStamp: "2014-12-02T11:29:29"}
+      timeStamp: "2014-12-02T11:29:29"};
 
     var then = [
       {
+        id: "1",
         event: "MoveMade",
         user: {
           userName: "Eyky"
         },
         move: "8",
-        id: "1",
         name: "LeGame",
         timeStamp: "2014-12-02T11:29:29"
       },
       {
-      event: "GameWon",
+        id: "1",
+        event: "GameWon",
         user:{
           userName: "Eyky"
         },
-        id: "1",
         name: "LeGame",
         timeStamp: "2014-12-02T11:29:29"
     }];
@@ -113,132 +113,132 @@ describe('game Won command', function(){
 
 
     var given = [{
+      id: "1",
       event: "GameCreated",
       user: {
         userName: "Eyky"
       },
-      id: "1",
       name: "LeGame",
       timeStamp: "2014-12-02T11:29:29"
     },
     {
+      id: "1",
       event: "GameJoined",
       user: {
         userName: "Doddi"
       },
-      id: "1",
       name: "LeGame",
       timeStamp: "2014-12-02T11:29:29"
     },
     {
+      id: "1",
       event: "MoveMade",
       user: {
         userName: "Eyky"
       },
       move: "4",
-      id: "1",
       name: "LeGame",
       timeStamp: "2014-12-02T11:29:29"
     },
     {
+      id: "1",
       event: "MoveMade",
       user: {
         userName: "Doddi"
       },
       move: "0",
-      id: "1",
       name: "LeGame",
       timeStamp: "2014-12-02T11:29:29"
     },
     {
+      id: "1",
       event: "MoveMade",
       user: {
         userName: "Eyky"
       },
       move: "2",
-      id: "1",
       name: "LeGame",
       timeStamp: "2014-12-02T11:29:29"
     },
     {
+      id: "1",
       event: "MoveMade",
       user: {
         userName: "Doddi"
       },
       move: "6",
-      id: "1",
       name: "LeGame",
       timeStamp: "2014-12-02T11:29:29"
     },
     {
+      id: "1",
       event: "MoveMade",
       user: {
         userName: "Eyky"
       },
       move: "3",
-      id: "1",
       name: "LeGame",
       timeStamp: "2014-12-02T11:29:29"
     },
     {
+      id: "1",
       event: "MoveMade",
       user: {
         userName: "Doddi"
       },
       move: "5",
-      id: "1",
       name: "LeGame",
       timeStamp: "2014-12-02T11:29:29"
     },
     {
+      id: "1",
       event: "MoveMade",
       user: {
         userName: "Eyky"
       },
       move: "7",
-      id: "1",
       name: "LeGame",
       timeStamp: "2014-12-02T11:29:29"
     },
     {
+      id: "1",
       event: "MoveMade",
       user: {
         userName: "Doddi"
       },
       move: "1",
-      id: "1",
       name: "LeGame",
       timeStamp: "2014-12-02T11:29:29"
     }];
 
     var when = {
+      id: "1",
       cmd: "MakeMove",
       user: {
         userName: "Eyky"
       },
       move: "8",
-      id: "1",
       name: "LeGame",
       timeStamp: "2014-12-02T11:29:29"
     };
 
     var then = [
       {
+        id: "1",
         event: "MoveMade",
         user: {
           userName: "Eyky"
         },
         move: "8",
-        id: "1",
         name: "LeGame",
         timeStamp: "2014-12-02T11:29:29"
       },
       {
+        id: "1",
         event: "GameDraw",
         user: {
           userName: "Eyky"
         },
-        id: "1",
         name: "LeGame",
         timeStamp: "2014-12-02T11:29:29"
       }];

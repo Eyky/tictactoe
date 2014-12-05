@@ -48,39 +48,40 @@ describe('join game command', function(){
   it('should emit game is full when attempting to join a full game', function(){
 
     var given = [{
+      id: "1",
       event: "GameCreated",
       user: {
         userName: "Eyky"
       },
-      id: "1",
       name: "LeGame",
       timeStamp: "2014-12-02T11:29:29"
     },
       {
+        id: "1",
         event: "GameJoined",
         user: {
           userName: "Doddi"
         },
-        id: "1",
         name: "LeGame",
         timeStamp: "2014-12-02T11:29:29"
       }
     ];
 
-    var when = {cmd: "JoinGame",
+    var when = {
+      id: "1",
+      cmd: "JoinGame",
       user: {
         userName: "Noob"
       },
-      id: "1",
       name: "LeGame",
       timeStamp: "2014-12-02T11:29:29"};
 
     var then = [{
+      id: "1",
       event: "GameFull",
       user: {
         userName: "Noob"
       },
-      id: "1",
       name: "LeGame",
       timeStamp: "2014-12-02T11:29:29"
     }];

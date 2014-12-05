@@ -13,21 +13,21 @@ describe('create game command', function(){
     var given = [];
     var when =
     {
+      id: "1",
       cmd: "CreateGame",
       user: {
         userName: "Eyky"
       },
-      id: "1",
       name: "LeGame",
       timeStamp: "2014-12-02T11:29:29"
     };
     var then = [
       {
+        id: "1",
         event: "GameCreated",
         user: {
           userName: "Eyky"
         },
-        id: "1",
         name: "LeGame",
         timeStamp: "2014-12-02T11:29:29"
       }

@@ -7,17 +7,29 @@ var should = require('should');
 describe('In memory event store', function(){
 
 
-  var createGameEvent = [
+  var createGameEvent =
     {
+      id: "1",
       event: "GameCreated",
       user: {
         userName: "Eyky"
       },
-      id: "1",
       name: "LeGame",
       timeStamp: "2014-12-02T11:29:29"
     }
-  ];
+  ;
+
+  var joinGameEvent = {
+    id: "2",
+    event: "GameJoined",
+    user: {
+      userName: "Doddi"
+    },
+    name: "LeGame",
+    timeStamp: "2014-12-02T11:29:29"
+  };
+
+
 
 
   it('Should return empty array for unkown id', function(){
@@ -41,7 +53,20 @@ describe('In memory event store', function(){
 
     var loadedEvents = store.loadEvents('1234');
 
-    should(loadedEvents).eql(createGameEvent);
+    should(loadedEvents).eql([createGameEvent]);
   });
 
-})
+  it('should append new events to older events', function(){
+
+
+    var store = memoryStore();
+
+    store.storeEvents('1234', [createGameEvent]);
+    store.storeEvents('1234', [joinGameEvent]);
+
+    var loadedEvents = store.loadEvents('1234');
+
+    should(loadedEvents).eql([createGameEvent, joinGameEvent]);
+
+  });
+});

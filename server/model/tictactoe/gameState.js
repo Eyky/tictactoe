@@ -29,7 +29,7 @@ module.exports = function(history, currentMove){
 
 
 
-
+console.log(gameGrid);
 
 
   return {

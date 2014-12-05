@@ -52,6 +52,7 @@ describe('join game command', function(){
       user: {
         userName: "Eyky"
       },
+      id: "1",
       name: "LeGame",
       timeStamp: "2014-12-02T11:29:29"
     },
@@ -60,6 +61,7 @@ describe('join game command', function(){
         user: {
           userName: "Doddi"
         },
+        id: "1",
         name: "LeGame",
         timeStamp: "2014-12-02T11:29:29"
       }
@@ -69,6 +71,7 @@ describe('join game command', function(){
       user: {
         userName: "Noob"
       },
+      id: "1",
       name: "LeGame",
       timeStamp: "2014-12-02T11:29:29"};
 
@@ -77,6 +80,7 @@ describe('join game command', function(){
       user: {
         userName: "Noob"
       },
+      id: "1",
       name: "LeGame",
       timeStamp: "2014-12-02T11:29:29"
     }];

@@ -24,6 +24,7 @@ describe('Make Move command', function(){
         user: {
           userName: "Doddi"
         },
+        id: "1",
         name: "LeGame",
         timeStamp: "2014-12-02T11:29:29"
       }
@@ -33,6 +34,7 @@ describe('Make Move command', function(){
     var when =
     {
       cmd: "MakeMove",
+      id: "1",
       user: {
         userName: "Eyky"
       },
@@ -43,6 +45,7 @@ describe('Make Move command', function(){
     var then = [
       {
         event: "MoveMade",
+        id: "1",
         user: {
           userName: "Eyky"
         },
@@ -68,6 +71,7 @@ describe('Make Move command', function(){
       user: {
         userName: "Eyky"
       },
+      id: "1",
       name: "LeGame",
       timeStamp: "2014-12-02T11:29:29"
       },
@@ -76,6 +80,7 @@ describe('Make Move command', function(){
         user: {
           userName: "Doddi"
         },
+        id: "1",
         name: "LeGame",
         timeStamp: "2014-12-02T11:29:29"
       },
@@ -96,6 +101,7 @@ describe('Make Move command', function(){
         userName: "Doddi"
       },
       move: "0",
+      id: "1",
       name: "LeGame",
       timeStamp: "2014-12-02T11:29:29"
     };
@@ -107,6 +113,7 @@ describe('Make Move command', function(){
           userName: "Doddi"
         },
         move: "0",
+        id: "1",
         name: "LeGame",
         timeStamp: "2014-12-02T11:29:29"
       }
@@ -128,6 +135,7 @@ describe('Make Move command', function(){
       user: {
         userName: "Eyky"
       },
+      id: "1",
       name: "LeGame",
       timeStamp: "2014-12-02T11:29:29"
     },
@@ -136,6 +144,7 @@ describe('Make Move command', function(){
         user: {
           userName: "Doddi"
         },
+        id: "1",
         name: "LeGame",
         timeStamp: "2014-12-02T11:29:29"
       },
@@ -145,6 +154,7 @@ describe('Make Move command', function(){
           userName: "Eyky"
         },
         move: "0",
+        id: "1",
         name: "LeGame",
         timeStamp: "2014-12-02T11:29:29"
       }
@@ -156,6 +166,7 @@ describe('Make Move command', function(){
         userName: "Eyky"
       },
       move: "2",
+      id: "1",
       name: "LeGame",
       timeStamp: "2014-12-02T11:29:29"
     };
@@ -167,6 +178,7 @@ describe('Make Move command', function(){
           userName: "Eyky"
         },
         move: "2",
+        id: "1",
         name: "LeGame",
         timeStamp: "2014-12-02T11:29:29"
       }];

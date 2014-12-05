@@ -17,6 +17,7 @@ describe('create game command', function(){
       user: {
         userName: "Eyky"
       },
+      id: "1",
       name: "LeGame",
       timeStamp: "2014-12-02T11:29:29"
     };
@@ -26,6 +27,7 @@ describe('create game command', function(){
         user: {
           userName: "Eyky"
         },
+        id: "1",
         name: "LeGame",
         timeStamp: "2014-12-02T11:29:29"
       }

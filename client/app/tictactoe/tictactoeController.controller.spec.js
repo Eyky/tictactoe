@@ -2,12 +2,10 @@
  * Created by eyky on 6.12.2014.
  */
 
+'use strict';
+
 describe('Controller: Tictactoe', function (){
 
-
-
-
-  it('should ')
 
   // load the controller's module
   beforeEach(module('tictactoeApp'));

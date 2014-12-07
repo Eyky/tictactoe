@@ -18,6 +18,7 @@
   "trailing": true,
   "smarttabs": true,
   "globals": {
+    "afterEach":false,
     "jQuery": true,
     "angular": true,
     "console": true,

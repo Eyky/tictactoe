@@ -23,6 +23,7 @@ describe('Controller: Tictactoe', function (){
     });
   }));
 
+
   afterEach(function () {
     httpBackend.verifyNoOutstandingExpectation();
     httpBackend.verifyNoOutstandingRequest();
@@ -63,4 +64,4 @@ describe('Controller: Tictactoe', function (){
 
   });
 
-})
+});

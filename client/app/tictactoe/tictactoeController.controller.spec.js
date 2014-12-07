@@ -60,7 +60,6 @@ describe('Controller: Tictactoe', function (){
     scope.createGame();
     httpBackend.flush();
 
-
     expect(scope.processedEvents.length).toBe(1);
 
 

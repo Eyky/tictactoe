@@ -13,7 +13,6 @@ describe('POST /api/createGame', function() {
       name: "leGame",
       timeStamp: "2014-12-02T11:29:29"
     };
-
     var req = request(app);
     req
       .post('/api/createGame')

@@ -39,7 +39,10 @@ describe('Make Move command', function(){
       user: {
         userName: "Eyky"
       },
-      move: "0",
+      move:{
+        target: "0",
+        symbol: "X"
+      },
       name: "LeGame",
       timeStamp: "2014-12-02T11:29:29"
     };
@@ -50,7 +53,10 @@ describe('Make Move command', function(){
         user: {
           userName: "Eyky"
         },
-        move: "0",
+        move:{
+          target: "0",
+          symbol: "X"
+        },
         name: "LeGame",
         timeStamp: "2014-12-02T11:29:29"
       }];
@@ -91,7 +97,10 @@ describe('Make Move command', function(){
         user: {
           userName: "Eyky"
         },
-        move: "0",
+        move:{
+          target: "0",
+          symbol: "X"
+        },
         name: "LeGame",
         timeStamp: "2014-12-02T11:29:29"
       }
@@ -103,7 +112,10 @@ describe('Make Move command', function(){
       user: {
         userName: "Doddi"
       },
-      move: "0",
+      move:{
+        target: "0",
+        symbol: "0"
+      },
       name: "LeGame",
       timeStamp: "2014-12-02T11:29:29"
     };
@@ -115,7 +127,10 @@ describe('Make Move command', function(){
         user: {
           userName: "Doddi"
         },
-        move: "0",
+        move:{
+          target: "0",
+          symbol: "0"
+        },
         name: "LeGame",
         timeStamp: "2014-12-02T11:29:29"
       }
@@ -155,7 +170,10 @@ describe('Make Move command', function(){
         user: {
           userName: "Eyky"
         },
-        move: "0",
+        move:{
+          target: "0",
+          symbol: "X"
+        },
         id: "1",
         name: "LeGame",
         timeStamp: "2014-12-02T11:29:29"
@@ -168,7 +186,10 @@ describe('Make Move command', function(){
       user: {
         userName: "Eyky"
       },
-      move: "2",
+      move:{
+        target: "2",
+        symbol: "0"
+      },
       name: "LeGame",
       timeStamp: "2014-12-02T11:29:29"
     };
@@ -180,7 +201,10 @@ describe('Make Move command', function(){
         user: {
           userName: "Eyky"
         },
-        move: "2",
+        move:{
+          target: "2",
+          symbol: "0"
+        },
         name: "LeGame",
         timeStamp: "2014-12-02T11:29:29"
       }];
@@ -219,7 +243,10 @@ describe('Make Move command', function(){
         user: {
           userName: "Eyky"
         },
-        move: "0",
+        move:{
+          target: "0",
+          symbol: "X"
+        },
         name: "LeGame",
         timeStamp: "2014-12-02T11:29:29"
       },
@@ -229,7 +256,10 @@ describe('Make Move command', function(){
         user: {
           userName: "Doddi"
         },
-        move: "1",
+        move:{
+          target: "1",
+          symbol: "0"
+        },
         name: "LeGame",
         timeStamp: "2014-12-02T11:29:29"
       },
@@ -239,7 +269,10 @@ describe('Make Move command', function(){
         user: {
           userName: "Eyky"
         },
-        move: "4",
+        move:{
+          target: "4",
+          symbol: "X"
+        },
         name: "LeGame",
         timeStamp: "2014-12-02T11:29:29"
       },
@@ -249,7 +282,10 @@ describe('Make Move command', function(){
         user: {
           userName: "Doddi"
         },
-        move: "2",
+        move:{
+          target: "2",
+          symbol: "0"
+        },
         name: "LeGame",
         timeStamp: "2014-12-02T11:29:29"
       }];
@@ -262,7 +298,10 @@ describe('Make Move command', function(){
       user: {
         userName: "Eyky"
       },
-      move: "8",
+      move:{
+        target: "8",
+        symbol: "X"
+      },
       name: "LeGame",
       timeStamp: "2014-12-02T11:29:29"};
 
@@ -273,7 +312,10 @@ describe('Make Move command', function(){
         user: {
           userName: "Eyky"
         },
-        move: "8",
+        move:{
+          target: "8",
+          symbol: "X"
+        },
         name: "LeGame",
         timeStamp: "2014-12-02T11:29:29"
       },
@@ -321,7 +363,10 @@ describe('Make Move command', function(){
         user: {
           userName: "Eyky"
         },
-        move: "4",
+        move:{
+          target: "4",
+          symbol: "X"
+        },
         name: "LeGame",
         timeStamp: "2014-12-02T11:29:29"
       },
@@ -331,7 +376,10 @@ describe('Make Move command', function(){
         user: {
           userName: "Doddi"
         },
-        move: "0",
+        move:{
+          target: "0",
+          symbol: "0"
+        },
         name: "LeGame",
         timeStamp: "2014-12-02T11:29:29"
       },
@@ -341,7 +389,10 @@ describe('Make Move command', function(){
         user: {
           userName: "Eyky"
         },
-        move: "2",
+        move:{
+          target: "2",
+          symbol: "X"
+        },
         name: "LeGame",
         timeStamp: "2014-12-02T11:29:29"
       },
@@ -351,7 +402,10 @@ describe('Make Move command', function(){
         user: {
           userName: "Doddi"
         },
-        move: "6",
+        move:{
+          target: "6",
+          symbol: "0"
+        },
         name: "LeGame",
         timeStamp: "2014-12-02T11:29:29"
       },
@@ -361,7 +415,10 @@ describe('Make Move command', function(){
         user: {
           userName: "Eyky"
         },
-        move: "3",
+        move:{
+          target: "3",
+          symbol: "X"
+        },
         name: "LeGame",
         timeStamp: "2014-12-02T11:29:29"
       },
@@ -371,7 +428,10 @@ describe('Make Move command', function(){
         user: {
           userName: "Doddi"
         },
-        move: "5",
+        move:{
+          target: "5",
+          symbol: "0"
+        },
         name: "LeGame",
         timeStamp: "2014-12-02T11:29:29"
       },
@@ -381,7 +441,10 @@ describe('Make Move command', function(){
         user: {
           userName: "Eyky"
         },
-        move: "7",
+        move:{
+          target: "7",
+          symbol: "X"
+        },
         name: "LeGame",
         timeStamp: "2014-12-02T11:29:29"
       },
@@ -391,7 +454,10 @@ describe('Make Move command', function(){
         user: {
           userName: "Doddi"
         },
-        move: "1",
+        move:{
+          target: "1",
+          symbol: "0"
+        },
         name: "LeGame",
         timeStamp: "2014-12-02T11:29:29"
       }];
@@ -402,7 +468,10 @@ describe('Make Move command', function(){
       user: {
         userName: "Eyky"
       },
-      move: "8",
+      move:{
+        target: "8",
+        symbol: "X"
+      },
       name: "LeGame",
       timeStamp: "2014-12-02T11:29:29"
     };
@@ -414,7 +483,10 @@ describe('Make Move command', function(){
         user: {
           userName: "Eyky"
         },
-        move: "8",
+        move:{
+          target: "8",
+          symbol: "X"
+        },
         name: "LeGame",
         timeStamp: "2014-12-02T11:29:29"
       },

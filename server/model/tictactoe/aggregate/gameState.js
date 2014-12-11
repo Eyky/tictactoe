@@ -18,11 +18,11 @@ module.exports = function(history, currentMove){
       playerTurn++;
       lastPlayer = event.user.userName;
       if(playerTurn%2 === 0){
-        gameGrid[event.move] = '0';
+        gameGrid[event.move.target] = '0';
       }
       else{
 
-        gameGrid[event.move] = 'X';
+        gameGrid[event.move.target] = 'X';
       }
     }
   });

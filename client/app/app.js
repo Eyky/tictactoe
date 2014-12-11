@@ -15,6 +15,6 @@ angular.module('tictactoeApp', [
       .state('playgame/:id', {
         url: "/playgame/:id",
         templateUrl: 'app/tictactoe/tictactoegame.html'
-      })
+      });
     $locationProvider.html5Mode(true);
   });

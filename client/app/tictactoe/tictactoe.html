@@ -1,16 +1,14 @@
 <div>THIS IS THE HTML</div>
 
 <div ng-controller="TictactoeController">
-
+  <div ng-show = "fneh"> blabla</div>
   <label for="name">Name</label>
   <input id="name" ng-model="name">
-
+  <div ng-hide = "fneh"> blabla</div>
   <label for="userName">UserName</label>
   <input id="userName" ng-model="userName">
 
   <div>
-    {{name}}
-
     <button ng-click="createGame()">Create Game</button>
   </div>
 

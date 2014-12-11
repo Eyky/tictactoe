@@ -1,0 +1,31 @@
+<div  ng-controller ="tictactoeGameController">
+
+  <div ng-hide="gameJoined">
+    <label for="userName">UserName</label>
+    <input id="userName" ng-model="userName">
+    <button ng-click="joinGame()">Join Game</button>
+  </div>
+
+  <table id="tictactoe2", ng-show="gameJoined">
+    <tbody ng-click="makeMove($event)">
+    <tr>
+      <td id="0">&nbsp;</td>
+      <td id="1">&nbsp;</td>
+      <td id="2">&nbsp;</td>
+    </tr>
+    <tr>
+      <td id="3">&nbsp;</td>
+      <td id="4">&nbsp;</td>
+      <td id="5">&nbsp;</td>
+    </tr>
+    <tr>
+      <td id="6">&nbsp;</td>
+      <td id="7">&nbsp;</td>
+      <td id="8">&nbsp;</td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
+
+

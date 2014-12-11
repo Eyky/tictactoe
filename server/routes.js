@@ -13,6 +13,7 @@ module.exports = function(app) {
   app.use('/api/joinGame', require('./api/joinGame')(app).router);
   app.use('/api/makeMove', require('./api/makeMove')(app).router);
   app.use('/api/createGame', require('./api/createGame')(app).router);
+  app.use('/api/getEvents', require('./api/getEvents'));
  // app.use('/api/things', require('./api/thing')(app).router);
 
 

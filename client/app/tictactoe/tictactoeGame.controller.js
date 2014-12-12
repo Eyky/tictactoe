@@ -3,10 +3,9 @@
  */
 
 angular.module('tictactoeApp')
-  .controller('tictactoeGameController', function ($scope, $http, TicTacToeService, $stateParams) {
+  .controller('tictactoeGameController', function ($scope, $http, TicTacToeService, $stateParams, $interval) {
 
-
-
+    'use strict';
 
     TicTacToeService.setUUID($stateParams.id);
 
@@ -17,7 +16,7 @@ angular.module('tictactoeApp')
 
 
     $scope.processEvents = function(events){
-
+      $scope.processedEvents = events;
 
       console.log(events);
       if(events[0].event === 'GameJoined'){
@@ -29,7 +28,7 @@ angular.module('tictactoeApp')
         //TicTacToeService.setGameName($scope.name);
         TicTacToeService.setGameJoined(true);
         $scope.gameJoined = TicTacToeService.getGameJoined();
-        console.log(TicTacToeService.getPlayerSymbol())
+
 
       }
       if(events[0].event === 'MoveMade'){
@@ -110,28 +109,34 @@ angular.module('tictactoeApp')
 
     $scope.processPastEvents = function(data){
       data.forEach(function(event){
+        //console.log(event);
         if(event.event === 'MoveMade'){
-          console.log('event', event.move.target);
-          //console.log(TicTacToeService.getPlayerSymbol());
+
           $("#" + event.move.target).empty().append(event.move.symbol);
 
         }
-        if(event.event === 'PlayerWins'){
-          console.log(event);
-          if(event.user.userName !== TicTacToeService.getPlayer()){
-            draw(event.move.target, event.move.symbol);
+        if(event.event === 'GameWon'){
+
+          if(event.user.userName !== TicTacToeService.getPlayerName()){
+
             console.log('You Lose');
             clearInterval(intervalID);
           }
+          else{
+            console.log('You win');
+          }
+        }
+        if(event.event === 'GameDraw'){
+          console.log('game draw');
         }
       });
 
     };
 
 
-    var intervalID = setInterval(function(){
+    var intervalID = $interval(function(){
       $scope.updateEvents();
-    }, 2000);
+    }, 666);
 
 
     });

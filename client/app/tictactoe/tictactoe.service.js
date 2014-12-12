@@ -1,6 +1,6 @@
 angular.module('tictactoeApp')
   .factory('TicTacToeService', function () {
-
+  'use strict';
 
     var playerOne;
     var playerTwo;
@@ -65,5 +65,5 @@ angular.module('tictactoeApp')
       }
 
 
-    }
+    };
   });

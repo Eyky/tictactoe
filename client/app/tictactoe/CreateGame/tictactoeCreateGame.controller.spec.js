@@ -23,8 +23,8 @@ describe('Controller: TictactoeController', function() {
 
     TicTacToeService.getUUID = function () {
       return "1";
-    }
-    var genId = 1;
+    };
+
     scope = $rootScope.$new();
     TictactoeControllerCtrl = $controller('TictactoeController', {
       $scope: scope
@@ -65,7 +65,7 @@ describe('Controller: TictactoeController', function() {
 
 
     scope.name = "leGame";
-    scope.userName = "Eyky"
+    scope.userName = "Eyky";
 
     scope.createGame();
 

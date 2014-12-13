@@ -36,12 +36,10 @@ describe('Controller: tictactoeGameController', function(){
 
     TicTacToeService.getSquareClicked = function(){
       return "4";
-    }
+    };
 
 
 
-
-    var genId = 1;
     scope = $rootScope.$new();
     TictactoeControllerCtrl = $controller('tictactoeGameController', {
       $scope: scope
@@ -119,7 +117,7 @@ describe('Controller: tictactoeGameController', function(){
       target:{
         cellIndex: '4'
       }
-    }
+    };
 
     scope.makeMove(event);
 

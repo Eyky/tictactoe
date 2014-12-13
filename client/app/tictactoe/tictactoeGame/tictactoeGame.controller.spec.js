@@ -26,6 +26,21 @@ describe('Controller: tictactoeGameController', function(){
       return "leGame";
     };
 
+    TicTacToeService.getPlayerSymbol = function(){
+      return "X";
+    };
+
+    TicTacToeService.getPlayerName = function(){
+      return "Eyky";
+    };
+
+    TicTacToeService.getSquareClicked = function(){
+      return "4";
+    }
+
+
+
+
     var genId = 1;
     scope = $rootScope.$new();
     TictactoeControllerCtrl = $controller('tictactoeGameController', {
@@ -69,6 +84,48 @@ describe('Controller: tictactoeGameController', function(){
 
     httpBackend.flush();
     expect(scope.processedEvents.length).toBe(1);
+
+  });
+
+  it('should emit MoveMade when a square is clicked', function(){
+
+    httpBackend.expectPOST('/api/makeMove/', {
+      id: "1",
+      cmd: 'MakeMove',
+      user:{
+        userName: "Eyky"
+      },
+      name: "leGame",
+      move:{
+        target: "4",
+        symbol: "X"
+      },
+      timeStamp: "2014-01-01T03:06:00"
+    }).respond([{
+      id: "1",
+      event: "MoveMade",
+      user:{
+        userName: "Eyky"
+      },
+      name: "leGame",
+      move:{
+        symbol: "X",
+        target: "4"
+      }
+    }]);
+
+
+    var event = {
+      target:{
+        cellIndex: '4'
+      }
+    }
+
+    scope.makeMove(event);
+
+    httpBackend.flush();
+    expect(scope.processedEvents.length).toBe(1);
+
 
   });
 

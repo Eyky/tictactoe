@@ -49,8 +49,6 @@ angular.module('tictactoeApp')
     $scope.makeMove = function(event){
 
 
-      console.log('target ', event.target.id);
-
       var postPromise = $http.post('/api/makeMove/',{
           "id":TicTacToeService.getUUID(),
           "cmd":"MakeMove",
@@ -59,10 +57,10 @@ angular.module('tictactoeApp')
           },
           "name":TicTacToeService.getGameName(),
           move:{
-            target: event.target.id,
+            target: event.target.cellIndex,
             symbol: TicTacToeService.getPlayerSymbol()
           },
-          "timeStamp":"2014-12-02T11:29:29"
+          "timeStamp":TicTacToeService.getNewDate()
         }
       );
       postPromise.then(function(data){

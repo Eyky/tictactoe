@@ -57,7 +57,7 @@ angular.module('tictactoeApp')
           },
           "name":TicTacToeService.getGameName(),
           move:{
-            target: event.target.cellIndex,
+            target: event.target.id,
             symbol: TicTacToeService.getPlayerSymbol()
           },
           "timeStamp":TicTacToeService.getNewDate()

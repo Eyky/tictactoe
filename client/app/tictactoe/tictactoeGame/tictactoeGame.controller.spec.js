@@ -115,7 +115,7 @@ describe('Controller: tictactoeGameController', function(){
 
     var event = {
       target:{
-        cellIndex: '4'
+        id: '4'
       }
     };
 

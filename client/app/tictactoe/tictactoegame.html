@@ -3,7 +3,7 @@
   <div ng-hide="gameJoined">
     <label for="userName">UserName</label>
     <input id="userName" ng-model="userName">
-    <button ng-click="joinGame()">Join Game</button>
+    <button id="joinGame" ng-click="joinGame()">Join Game</button>
   </div>
 
   <table id="tictactoe2", ng-show="gameJoined">
@@ -25,6 +25,7 @@
     </tr>
     </tbody>
   </table>
+  <div id="result"></div>
 
 </div>
 

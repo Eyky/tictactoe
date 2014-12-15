@@ -9,7 +9,7 @@ angular.module('tictactoeApp')
 
     TicTacToeService.setUUID($stateParams.id);
 
-
+    var fneh = false;
 
     $scope.gameJoined = TicTacToeService.getGameJoined();
 
@@ -47,25 +47,27 @@ angular.module('tictactoeApp')
 
 
     $scope.makeMove = function(event){
+      if(fneh === false){
 
+        var postPromise = $http.post('/api/makeMove/',{
+            "id":TicTacToeService.getUUID(),
+            "cmd":"MakeMove",
+            "user":{
+              "userName":TicTacToeService.getPlayerName()
+            },
+            "name":TicTacToeService.getGameName(),
+            move:{
+              target: event.target.id,
+              symbol: TicTacToeService.getPlayerSymbol()
+            },
+            "timeStamp":TicTacToeService.getNewDate()
+          }
+        );
+        postPromise.then(function(data){
+          $scope.processEvents(data.data);
+        });
+      }
 
-      var postPromise = $http.post('/api/makeMove/',{
-          "id":TicTacToeService.getUUID(),
-          "cmd":"MakeMove",
-          "user":{
-            "userName":TicTacToeService.getPlayerName()
-          },
-          "name":TicTacToeService.getGameName(),
-          move:{
-            target: event.target.id,
-            symbol: TicTacToeService.getPlayerSymbol()
-          },
-          "timeStamp":TicTacToeService.getNewDate()
-        }
-      );
-      postPromise.then(function(data){
-        $scope.processEvents(data.data);
-      });
     };
 
 
@@ -117,15 +119,20 @@ angular.module('tictactoeApp')
 
           if(event.user.userName !== TicTacToeService.getPlayerName()){
 
-            console.log('You Lose');
+            $("#result").empty().append("You lose");
+            fneh = true;
             clearInterval(intervalID);
           }
           else{
-            console.log('You win');
+            $("#result").empty().append("You Win");
+            fneh = true;
+            clearInterval(intervalID);
           }
         }
         if(event.event === 'GameDraw'){
-          console.log('game draw');
+          $("#result").empty().append("Draw");
+          fneh = true;
+          clearInterval(intervalID);
         }
       });
 

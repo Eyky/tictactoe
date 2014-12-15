@@ -27,10 +27,10 @@ describe('Tictactoe game play', function() {
         game.nameOfGame("Cheese!");
         game.nameOfUser("Jerry!");
         game.createGame();
-        /*
+
         game.waitForTictactoePage();
         game.expectGameBoardShowing();
-        game.expectFirstCellShowing();*/
+        game.expectFirstCellShowing();
       });
 
   });

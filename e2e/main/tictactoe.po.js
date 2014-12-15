@@ -8,7 +8,8 @@
 var TictactoePage = function() {
   this.container = element(by.css('.container'));
   this.userName = element(by.css('#userName'));
-  this.joinGameButton = element(by.css('#joinGameButton'));
+  this.joinGameButton = element(by.css('#joinGame'));
+  this.result = element(by.css('#result'));
   this.board = element(by.css('#tictactoe2'));
   this.cell0 = element(by.css('.cell0'));
   this.cell1 = element(by.css('.cell1'));

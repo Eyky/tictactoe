@@ -10,6 +10,7 @@ var CreateGamePage = function() {
   this.name = element(by.css('#name'));
   this.userName = element(by.css('#userName'));
   this.createGameButton = element(by.css('#createGame'));
+
 };
 
 module.exports = new CreateGamePage();

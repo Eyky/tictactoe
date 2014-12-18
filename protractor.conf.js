@@ -45,6 +45,6 @@ exports.config = {
   //
   // See the full list at https://github.com/juliemr/minijasminenode
   jasmineNodeOpts: {
-    defaultTimeoutInterval: 300000
+    defaultTimeoutInterval: 90000
   }
 };
